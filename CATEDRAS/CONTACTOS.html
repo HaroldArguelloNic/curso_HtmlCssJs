@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Contacto</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/800px-HTML5_logo_and_wordmark.svg.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <script>
+        var visible = true;
+        var visible2 = false;
+        function iniciar() {
+            var elemento = document.getElementById("cierremenu");
+            var elemento2 = document.getElementById("menu_img");
+            elemento.addEventListener("click", cerrarmenu);
+            elemento2.addEventListener("click", mostrarmenu);
+        }
+        function cerrarmenu() {
+
+            var elemento = document.getElementById("menuprincipal");
+            var elemento2 = document.getElementById("menuico");
+            if (!visible) {
+                elemento.style.display = "flex";
+                elemento2.style.display = "none";
+                visible = true;
+                visible2 = false;
+            } else {
+                elemento.style.display = "none";
+                elemento2.style.display = "flex";
+                visible = false;
+                visible2 = true;
+            }
+        }
+        function mostrarmenu() {
+            var elemento2 = document.getElementById("menuico");
+            var elemento = document.getElementById("menuprincipal");
+            if (!visible2) {
+                elemento2.style.display = "flex";
+                elemento.style.display = "none";
+                visible2 = true;
+                visible = false;
+
+            } else {
+                elemento2.style.display = "none";
+                elemento.style.display = "flex";
+                visible2 = false;
+                visible = true;
+            }
+
+        }
+
+        window.addEventListener("load", iniciar);
+    </script>
+
+</head>
+<nav id="menuico">
+    <img src="images/User_Menu.ico" width="35" height="35" id="menu_img" />
+</nav>
+<nav id="menuprincipal">
+    <ul>
+        <li><span><a href="INDEX.html">Inicio</a></span></li>
+        <li><span><a href="GALERIA.html">Galeria</a></span></li>
+        <li><span><a href="CONTACTOS.html">Contactos</a></span></li>
+        <li id="cierremenu"><span>Cerrar<img src="images/Closeout.ico" width="35" height="35" /></span></li>
+    </ul>
+</nav>
+
+<body >
+    <header >
+        <img id="logo" src="images/800px-HTML5_logo_and_wordmark.svg.png" width="100" />
+        <h4 id="titulo1">Aprendiendo Html5</h4>
+    </header>
+    <article id="articontact">
+    <div><img src="images/logoupoli.jpg" width="150" /></div>    
+    
+    <div>
+    <p>
+    <h1>Trabajando para la comunidad</h1>
+    </p>
+    </div>   
+
+    </article>
+
+    <main>
+
+        <div id="cont1">
+            <div>
+                <img src="images/FOTOID.JPG" width="150" />
+            </div>
+            <div>
+                <p>Nombre: Harold Arguello <br>
+                    Edad: 46 años<br>
+                    Estudiante de la carrera Ingenieria en Sistemas<br>
+                    Telefono: 8677-3167<br>
+                    email: hjarguellor@gmail.com
+                </p>
+            </div>
+            <div>
+                <img src="images/IDVICTOR.jpg" width="150" />
+            </div>
+            <div>
+                <p>Nombre: Victor Carvajal Ayerdis <br>
+                    Edad: 20 años<br>
+                    Estudiante de la carrera Ingenieria en Sistemas<br>
+                    Telefono: 8585-3202<br>
+                    email:
+                </p>
+            </div>
+            <div>
+                <img src="images/IDALEXA.jpg" width="150" />
+            </div>
+            <div>
+                <p>Nombre: Daybeling Alexandra Rugama Lopez<br>
+                    Edad: 18 años<br>
+                    Estudiante de la carrera Ingenieria en Sistemas<br>
+                    Telefono: 7704-5414<br>
+                    email:
+                </p>
+            </div>
+        </div>
+        <div id="cont2">
+            <p>Profesor: Pedro Pablo Mendoza Garcia, contacto: pmendoza35@docente.upoli.edu.ni</p>
+        </div>
+        
+    </main>
+    <footer id="pie">
+        <p>Tipitapa, Managua, Nicaragua</p>
+        &copy; 2021, <a href="mailto:hjarguellor@gmail.com"> Harold Arguello</a>
+    </footer>
+    
+</body>
+
+
+</html>

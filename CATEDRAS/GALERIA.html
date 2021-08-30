@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Galeria </title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/800px-HTML5_logo_and_wordmark.svg.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="css/miestilo.css">
+        <script>
+            var visible= true;
+            var visible2= false;
+            function iniciar(){
+            var elemento = document.getElementById("cierremenu");
+            var elemento2 = document.getElementById("menu_img");
+            elemento.addEventListener("click",cerrarmenu);
+            elemento2.addEventListener("click",mostrarmenu);
+            }
+            function cerrarmenu(){
+
+            var elemento=document.getElementById("menuprincipal");
+            var elemento2=document.getElementById("menuico") ;
+            if(!visible){
+                elemento.style.display="flex";
+                elemento2.style.display="none";
+                visible=true;
+                visible2=false;
+            }else{
+                elemento.style.display="none";
+                elemento2.style.display="flex";
+                visible=false;
+                visible2=true;
+                }
+            }
+            function mostrarmenu(){
+            var elemento2=document.getElementById("menuico");
+            var elemento=document.getElementById("menuprincipal");
+            if (!visible2){
+                elemento2.style.display="flex";
+                elemento.style.display="none";
+                visible2=true;
+                visible=false;
+
+            } else {
+                elemento2.style.display="none";
+                elemento.style.display="flex";
+                visible2=false;
+               visible=true;}
+
+            }
+                
+            window.addEventListener("load",iniciar);
+        </script>
+    
+    </head>
+    <nav id="menuico">
+        <img src="images/User_Menu.ico" width="35" height="35" id="menu_img"/>
+    </nav>
+    <nav id="menuprincipal">
+        <ul>
+            <li><span><a href="INDEX.html">Inicio</a></span></li>
+            <li><span><a href="GALERIA.html">Galeria</a></span></li>
+            <li><span><a href="CONTACTOS.html">Contactos</a></span></li>
+            <li id="cierremenu"><span>Cerrar<img src="images/Closeout.ico" width="35" height="35" /></span></li>
+        </ul>  
+       
+    </nav> 
+    <body>
+        <header>
+           <img id="logo" src="images/800px-HTML5_logo_and_wordmark.svg.png" width="100"/>
+          <h4 id="titulo1">Aprendiendo Html5</h4> 
+        </header>  
+    
+        <main>
+            <div>  
+            <section>
+                <article>
+                    <h2 id="titulo2">El padre del Html</h2>
+                    <div id="foto1">
+                        <img src="images/Tim_lee_html.jpg" />
+                    </div>
+                    <div id="arti1">
+                        <br>
+                        <p>Antes de la Web.Trabajó en proyectos de programación y en 1980 desarrolló su primer prototipo de la Web, llamado "Enquire", para encontrar investigadores y proyectos conectados con su trabajo, aunque no salió al público.<br>
+                            Continúo visionando sobre un espacio de información global donde computadoras alrededor del mundo pudieran enlazarse. Propuso esta idea a la compañía para la que trabajaba y no recibió respuesta.
+                            Creó, luego, el lenguaje HTML o Lenguaje de etiquetas de hipertexto, el protocolo HTTP y el sistema de localización de objetos en la web <strong> URL (Uniform Resource Locator).</strong> 
+                            Estableció a finales de 1990 la primera comunicación entre cliente y servidor usando el protocolo.  
+                            Fundó en 1994 el <strong> Wide Consortium (W3C) </strong>una comunidad internacional que garantiza el crecimiento de la web y que trabaja en la web semántica. 
+                        </p>
+                    </div>
+                </article>
+                <article id="arti2">
+                    <div id="div1">
+                        <img src="images/paginasweb2.jpg" height="115" width="150"/>
+                    </div>   
+                    <div id="div2">
+                        <img src="images/HTML_source_example.png" height="115" width="150"/>
+                    </div>
+                    <div id="div3">
+                        <p>Tim Berners-Lee fue crítico con las expectativas generadas alrededor de la Web 2.0 cuando se argumentó sobre esta plataforma que «si la web 1.0 conectaba ordenadores, la web 2.0 conecta personas». Tim opina que no se trata de una nueva generación de web sino una forma diferente y, eso si, mucho más capaz de desplegar aplicaciones sobre la misma plataforma de la web inventado por él.
+                        </p>
+                    </div>
+                </article>
+                
+            </section>
+            
+            <aside>
+                <h3>Que es HTML?</h3>
+                <p>HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. ... "Hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web.</p>
+            </aside>
+        </div>        
+        </main> 
+        <footer id="pie">
+            <p>Tipitapa, Managua, Nicaragua</p>
+            &copy; 2021, <a href= "mailto:hjarguellor@gmail.com"> Harold Arguello</a>
+        </footer>    
+    </body>
+    
+</html>
